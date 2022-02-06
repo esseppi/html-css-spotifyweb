@@ -1,3 +1,55 @@
-body {
-  background-color: #141922;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body > div:first-child {
+  height: calc(100vh - 10rem);
+  width: 100%;
+  z-index: 1;
+}
+body > div:last-child {
+  height: 10rem;
+  min-height: 8rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+header {
+  text-decoration: none;
+  align-self: flex-start;
+  background-color: blue;
+  float: left;
+  width: 300px;
+  height: 100%;
+}
+
+main {
+  text-decoration: none;
+  align-self: flex-end;
+  width: calc(100% - 300px);
+  height: 100%;
+  float: left;
+}
+
+footer {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.banner {
+  height: 10rem;
+  width: 100%;
+  background-color: gold;
+}
+
+.content {
+  background-color: aquamarine;
+  height: calc(100% - 10rem);
+  width: 100%;
 }
