@@ -12,15 +12,13 @@
 body > div:first-child {
   height: calc(100vh - 60px);
   width: 100%;
-  z-index: 1;
 }
 body > div:last-child {
-  height: 60px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* NAVIGATORE */
@@ -65,13 +63,14 @@ main {
 }
 .banner .button {
   font-size: 0.8em;
+  text-align: center;
   color: white;
   text-decoration: none;
   display: block;
   border-radius: 25px;
   border: 1.5px solid white;
   padding: 0.55rem 3rem 0.55rem 3rem;
-  z-index: 3;
+  z-index: 2;
 }
 .content {
   background-color: rgb(20, 25, 25);
@@ -83,9 +82,50 @@ main {
 /* FOOTER */
 
 footer {
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
   width: 100%;
   background-color: rgb(40, 40, 40);
+}
+
+footer .right {
+  flex-basis: 220px;
+}
+
+footer .left {
+  flex-basis: 200px;
+}
+
+/* footer central */
+footer .central {
+  display: flex;
+  flex-direction: column;
+
+  width: 900px;
+  min-width: 250px;
+}
+.central .center.up {
+  display: flex;
+  align-self: center;
+  font-size: 1.2em;
+  padding: 10px;
+  vertical-align: middle;
+  justify-content: space-around;
+  width: 250px;
+}
+.central .center.down {
+  min-width: 180px;
+}
+.central .center.down hr:first-child {
+  font-weight: 300;
+  float: left;
+  width: 18%;
+}
+.central .center.down hr:last-child {
+  float: left;
+  width: 82%;
+  border-color: rgb(43, 43, 43);
 }
 
 /* UTILITIES */
