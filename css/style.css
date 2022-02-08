@@ -30,6 +30,7 @@ body > div:last-child {
   left: 0;
 }
 
+/* HEADER*/
 /* NAVIGATORE */
 /* hover */
 .gray:hover {
@@ -38,9 +39,7 @@ body > div:last-child {
 li:hover a {
   color: white;
 }
-
 /* fine hover */
-
 header {
   display: flex;
   flex-direction: column;
@@ -64,8 +63,12 @@ header {
 }
 header ul {
   font-size: 0.8em;
-
   list-style: none;
+}
+header .playlist ul {
+  height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 header ul li {
   margin-bottom: 0.8rem;
@@ -74,11 +77,11 @@ header div ul li a img {
   width: 1.4625rem;
   height: 1.3rem;
 }
-
 #white {
   color: white;
 }
 .gray {
+  font-size: 1rem;
   color: var(--font-gray);
 }
 a,
@@ -87,7 +90,6 @@ a:visited {
   text-decoration: none;
   cursor: pointer;
 }
-
 img {
   height: 100%;
   object-fit: cover;
@@ -96,7 +98,7 @@ img {
 }
 /* navUp */
 nav ul li {
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 nav ul > li:first-child {
@@ -133,6 +135,7 @@ header h3 {
 .navDown i {
   margin: 0.5rem 0.5rem 0.5rem 0rem;
 }
+/* FINE HEADER */
 
 /* MAIN */
 /* hover main */
@@ -201,7 +204,6 @@ main {
 .line:last-child img {
   border-radius: 50%;
 }
-
 .card .card-img {
   position: relative;
 }
@@ -216,13 +218,11 @@ main {
   font-size: 12px;
   color: var(--font-gray);
 }
-
 .cards .card img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-
 .cards .card p {
   margin-top: 0.2rem;
 }
@@ -254,11 +254,20 @@ footer {
 footer .left {
   background-color: rgb(40, 40, 40);
   display: flex;
+  font-size: 0.8rem;
   flex-direction: row;
   justify-content: space-around;
   flex: 0 1 200px;
   min-width: 90px;
   margin-right: 1.5rem;
+}
+footer .left div:nth-child(2) p:first-child {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+footer .left div:nth-child(2) p:last-child {
+  font-size: 0.5rem;
+  color: var(--font-gray);
 }
 footer .left > div:first-child {
   padding: 7px 2px 7px 7px;
@@ -284,6 +293,7 @@ footer .central {
   max-width: 800px;
   width: 900px;
   min-width: 110px;
+  font-size: 1.3rem;
 }
 .central .center.up {
   flex: 1 0 130px;
@@ -307,16 +317,19 @@ footer .central {
 }
 /* footer right */
 footer .right {
+  font-size: 0.8rem;
+
   margin-left: 1rem;
   align-items: center;
   flex: 0 1 200px;
   display: flex;
+  justify-content: space-around;
 
   min-width: calc(90px - 1rem);
 }
 footer .right div:first-child {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   margin-right: 0.3rem;
   width: calc(50% - 1rem);
@@ -352,7 +365,6 @@ footer .right div:last-child hr:last-child {
 }
 
 /* RESPONSIVE */
-
 @media screen and (max-width: 1100px) {
   .cards .card {
     flex: 0 1 auto;
@@ -367,7 +379,6 @@ footer .right div:last-child hr:last-child {
     width: calc((100% / 2) - 1rem);
   }
 }
-
 @media screen and (max-width: 500px) {
   :root {
     --header-width: 50px;
@@ -378,12 +389,14 @@ footer .right div:last-child hr:last-child {
   .two {
     visibility: visible;
   }
+  header hr {
+    visibility: hidden;
+  }
   .cards .card {
     flex: 0 1 auto;
     margin: 0.5rem 0.5rem;
     width: calc((100% / 2) - 1rem);
   }
-
   .navUp,
   .navDown {
     display: none;
@@ -391,16 +404,11 @@ footer .right div:last-child hr:last-child {
   hr {
     color: black;
   }
-
   .navHidden {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  .navHidden div:first-child {
-    background-color: black;
-    z-index: 1;
   }
   .navHidden {
     height: 100%;
@@ -408,7 +416,6 @@ footer .right div:last-child hr:last-child {
   .navHidden img {
     display: inline-block;
     margin: 0.5rem auto;
-
     width: 30px;
     height: 30px;
   }
@@ -426,5 +433,8 @@ footer .right div:last-child hr:last-child {
     width: var(--header-width);
     height: 100%;
     font-size: 1.1rem;
+  }
+  footer .central {
+    font-size: 1rem;
   }
 }
