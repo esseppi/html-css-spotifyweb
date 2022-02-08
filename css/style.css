@@ -242,6 +242,37 @@ main {
 }
 
 /* FOOTER */
+/* hoover */
+.central:hover hr:first-child {
+  border-color: lightgreen;
+  position: relative;
+}
+.central:hover .fa-dot-circle {
+  visibility: visible;
+}
+.right:hover hr:first-child {
+  border-color: lightgreen;
+}
+.right:hover .fa-dot-circle {
+  visibility: visible;
+}
+.center.down,
+.right div:last-child {
+  position: relative;
+}
+.fa-dot-circle {
+  visibility: hidden;
+  transform: scale(50%) translateY(125%);
+  position: absolute;
+  bottom: 1px;
+}
+.center.down .fa-dot-circle {
+  left: 17%;
+}
+.right .fa-dot-circle {
+  left: 35%;
+}
+/* fine hoover */
 footer {
   display: flex;
   justify-content: space-between;
