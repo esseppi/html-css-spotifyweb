@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="x-icon">
-    <title>Saso Spotify</title>
+    <title>Spotify</title>
 </head>
 
 <body>
+    <!-- UP -->
     <div>
         <!-- NAVIGATORE -->
         <header>
             <div class="navUp">
                 <!-- logo -->
                 <div class="logo">
-                    <img src="img/logo.svg" alt="" srcset="">
+                    <img class="one" src="img/logo.svg" alt="" srcset="">
                 </div>
                 <!-- menu -->
                 <div>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a id="white" href="#">
                                 <img src="img/home.svg" alt=""> Home
                             </a>
                         </li>
@@ -42,56 +43,67 @@
                     </ul>
                 </div>
                 <!-- playlist -->
-                <div>
+                <div class="playlist">
                     <h3>PLAYLIST</h3>
-                    <div><i class="fas fa-plus-square"></i> Crea Playlist</div>
+                    <div class="gray"><i class="fas fa-plus-square"></i> Crea Playlist</div>
                     <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
-                    </ul>
-                    <ul>
-                        <li>Nome Playlist </li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
                     </ul>
                 </div>
             </div>
             <div class="navDown">
-                <a><i class="fas fa-arrow-circle-down"></i>Installa App</a>
+                <a class="gray"><i class="fas fa-arrow-circle-down"></i>Installa App</a>
                 <hr>
                 <span><i class="fas fa-user"></i>Jhon Doe</span>
             </div>
+            <div class="navHidden">
+                <div>
+                    <img class="two" src="img/logo-small.svg" alt="">
+                    <img src="img/home.svg" alt="" srcset="">
+                    <img src="img/search.svg">
+                    <img src="img/libreria.svg" alt="">
+                </div>
+                <div>
+                    <a class="gray"><i class="fas fa-arrow-circle-down"></i></a>
+                    <hr>
+                    <span><i class="fas fa-user"></i></span>
+                </div>
+            </div>
         </header>
-
         <!-- CONTENUTO -->
         <main>
             <div class="banner">
-
-                <a class="button" href="#">EFFETTUA L'UPGRADE</a>
-
+                <button class="button" href="#">EFFETTUA L'UPGRADE</button>
             </div>
             <div class="content">
                 <!-- content menu -->
                 <nav>
                     <ul>
-                        <li>IN EVIDENZA</li>
-                        <li>PODCAST</li>
-                        <li>CLASSIFICHE</li>
-                        <li>GENERI E MOOD</li>
-                        <li>NUOVE USCITE</li>
-                        <li>SCOPRI</li>
+                        <li>
+                            <a href="">IN EVIDENZA</a>
+                            <hr>
+                        </li>
+                        <li>
+                            <a href="">PODCAST</a>
+                        </li>
+                        <li>
+                            <a href="">CLASSIFICHE</a>
+                        </li>
+                        <li>
+                            <a href="">GENERI E MOOD</a>
+                        </li>
+                        <li>
+                            <a href="">NUOVE USCITE</a>
+                        </li>
+                        <li>
+                            <a href="">SCOPRI</a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- music -->
@@ -101,33 +113,51 @@
                         <h1>Recently Played</h1>
                         <div class="cards">
                             <div class="card">
-                                <img src="img/metal_lifting.jpg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/metal_lifting.jpg" alt="" srcset="">
+                                </div>
                                 <h5>Heavy Metal</h5>
                                 <p>Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="img/stranger.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/stranger.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Stranger Things, Vol. 1 (a Netflix Original
                                     Soundtrack)</h5>
                                 <p>Kyle Dixon & Michael Stein</p>
                             </div>
                             <div class="card">
-                                <img src="img/aquietplace.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/aquietplace.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>A quiet place</h5>
                                 <p>Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="img/split.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/split.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Split</h5>
                                 <p>Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="img/cure.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/cure.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>A cure for wellness</h5>
                                 <p>Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="img/sinister.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/sinister.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Sinister</h5>
                                 <p>Subtitle</p>
                             </div>
@@ -135,15 +165,21 @@
                     </div>
                     <!-- creato per Jhon Doe -->
                     <div class="line">
-                        <h1>Recently Played</h1>
+                        <h1>Creato per Jhon Doe</h1>
                         <div class="cards">
                             <div class="card">
-                                <img src="img/radar.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/radar.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Release Radar</h5>
                             </div>
                             <div class="card">
-                                <img src="img/mixdaily.jpeg" alt="" srcset="">
-                                <h5>Daily Mix 1</h5>
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/mixdaily.jpeg" alt="" srcset="">
+                                    <h5>Daily Mix 1</h5>
+                                </div>
                             </div>
 
                         </div>
@@ -153,14 +189,19 @@
                         <h1>Artisti più popolari</h1>
                         <div class="cards">
                             <div class="card">
-                                <img src="img/youg.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/youg.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Lana del Rey</h5>
                             </div>
                             <div class="card">
-                                <img src="img/einaudi.jpeg" alt="" srcset="">
+                                <div class="card-img">
+                                    <i class="far fa-play-circle"></i>
+                                    <img src="img/einaudi.jpeg" alt="" srcset="">
+                                </div>
                                 <h5>Ludovico Einaudi</h5>
                             </div>
-
                         </div>
                     </div>
                 </section>
