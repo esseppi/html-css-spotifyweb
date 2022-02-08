@@ -4,8 +4,11 @@
   padding: 0;
 }
 :root {
-  font-family: sans-serif;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
   color: white;
+
+  --font-gray: darkgray;
   --header-width: 200px;
   --footer-height: 60px;
   --banner-height: 60px;
@@ -25,6 +28,15 @@ body > div:last-child {
 }
 
 /* NAVIGATORE */
+/* hover */
+.gray:hover {
+  color: white;
+}
+li:hover a {
+  color: white;
+}
+
+/* fine hover */
 
 header {
   display: flex;
@@ -35,7 +47,7 @@ header {
   float: left;
   width: var(--header-width);
   height: 100%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .logo {
   width: 100%;
@@ -49,16 +61,36 @@ header ul {
 }
 header div ul li {
   margin-bottom: 0.5rem;
+  margin-right: 1rem;
 }
 header div ul li a img {
   width: 1.4625rem;
   height: 1.3rem;
 }
+nav ul > li:first-child {
+  position: relative;
+}
+nav ul > li:first-child hr {
+  border-color: lightgreen;
+  width: 35%;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-35%);
+}
+#white {
+  color: white;
+}
+.gray {
+  color: var(--font-gray);
+}
 a,
 a:visited {
-  color: white;
+  color: var(--font-gray);
   text-decoration: none;
+  cursor: pointer;
 }
+
 img {
   height: 100%;
   object-fit: cover;
@@ -78,6 +110,9 @@ img {
   padding: 5px;
   margin-bottom: 1rem;
 }
+header h3 {
+  font-size: 16px;
+}
 /* navDown */
 .navDown {
   width: 80%;
@@ -88,6 +123,14 @@ img {
 }
 
 /* MAIN */
+/* hover main */
+main button:hover {
+  transform: scale(110%);
+}
+.card .card-img:hover i {
+  visibility: visible;
+}
+/* fine hover main */
 main {
   text-decoration: none;
   align-self: flex-end;
@@ -106,12 +149,13 @@ main {
 .banner .button {
   font-size: 0.8em;
   text-align: center;
+  background-color: transparent;
   color: white;
   text-decoration: none;
   display: block;
   border-radius: 25px;
   border: 1.5px solid white;
-  padding: 0.55rem 3rem 0.55rem 3rem;
+  padding: 0.55rem 2rem;
   z-index: 2;
 }
 .content {
@@ -127,7 +171,7 @@ main {
   text-align: center;
 }
 .content nav ul li {
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
   display: inline-block;
 }
 .cards {
@@ -137,15 +181,36 @@ main {
   flex-wrap: wrap;
 }
 .cards .card {
+  position: relative;
   flex: 0 1 auto;
   margin: 0 0.5rem;
   width: calc((100% / 6) - 1rem);
 }
+.line:last-child img {
+  border-radius: 50%;
+}
+
+.card .card-img {
+  position: relative;
+}
+.card .card-img i {
+  visibility: hidden;
+  position: absolute;
+  transform: scale(250%) translate(-25%, -25%);
+  top: 50%;
+  left: 50%;
+}
+.line p {
+  font-size: 12px;
+  color: var(--font-gray);
+}
+
 .cards .card img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
+
 .cards .card p {
   margin-top: 0.2rem;
 }
@@ -153,6 +218,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.content section h1 {
+  margin: 1rem 0;
+}
+.content section .line:nth-child(2) {
+  margin: 2rem 0;
+}
+.content section .line h5 {
+  margin-top: 0.8rem;
 }
 
 /* FOOTER */
@@ -263,4 +337,29 @@ footer .right div:last-child hr:last-child {
 }
 .mt05 {
   margin-top: 0.5rem;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px) {
+  .cards .card {
+    flex: 0 1 auto;
+    margin: 0.5rem 0.5rem;
+    width: calc((100% / 4) - 1rem);
+  }
+}
+@media screen and (max-width: 800px) {
+  .cards .card {
+    flex: 0 1 auto;
+    margin: 0.5rem 0.5rem;
+    width: calc((100% / 2) - 1rem);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards .card {
+    flex: 0 1 auto;
+    margin: 0.5rem 0.5rem;
+    width: calc((100% / 2) - 1rem);
+  }
 }
